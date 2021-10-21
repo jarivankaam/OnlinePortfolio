@@ -86,6 +86,89 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html{
+  background: #222222;
+  color:white;
+  font-family: Calibri;
+}
+
+.header{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  width:100%;
+
+  border-bottom: 2px solid #414141;
+
+
+}
+.header h2 a{
+  color:white;
+  text-decoration: none;
+}
+.header h2 a:hover{
+  color:grey;
+  text-decoration: underline;
+}
+.links h2{
+  font-size: 18px;
+}
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.links a{
+  color:white;
+  font-size: 18px;
+  padding-right: 10px;
+  padding-left:10px ;
+
+  text-decoration: none;
+  border-radius: 3px;
+}
+.links a:hover{
+  color: grey;
+
+}
+.title{
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+
+}
+.wrapper{
+  width: 70%;
+  margin: 0px auto;
+}
+
+.aboutme h2{
+  border-left: 5px solid #ffffff;
+  padding-left: 2px;
+}
+.footer{
+
+}
+.items{
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid #414141;
+}
+.items p{
+  margin: 10px;
+}
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes

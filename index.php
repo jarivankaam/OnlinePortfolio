@@ -23,9 +23,28 @@
 </head>
 
 <body>
+ <?php require_once 'header.php' ?>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+<div class="wrapper">
+  <div class="aboutme">
+    <h2>Over Mij</h2>
+    <p>wie ben ik en waarom zou u mij als stagair willen hebben? <br> Ik ben Jari van Kaam een leergerige jongen die graag aan de slag gaat met code.
+      <br> met mijn school heb ik de volgende talen al geleerd:</p>
+    <ul>
+      <li>Website development(zie tabje Website voor meer informatie)</li>
+      <li>Python development(zie tabje python voor meer informatie)</li>
+      <li>C# development</li>
+      <li>Java Development(zie tabje Java Development voor meer informatie)</li>
+    </ul>
+    <p>Waarom zou u mij precies als stagair willen? <br> ik kan goed samenwerken in een team en pak snel code op. <br> Ook ben ik erg doelgericht en maak ik mijn taken altijd af,
+      <br>en als dit niet lukt laat ik het tijdig weten.</p>
+    <h2>Mijn huidige opleiding</h2>
+    <p>Op het moment studeer ik aan het Curio(Terheidenseweg 350 te breda).<br> Hier volg ik de niveau 4 opleiding tot Software Developer. Ik zit op dit moment in een versnellersjaar.
+      <br>Dit betekent dat ik de 4 jarige durende opleiding in 3 jaar doe.</p>
+  </div>
+</div>
+
+<?php require_once 'footer.php' ?>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
