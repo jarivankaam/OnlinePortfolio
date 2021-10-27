@@ -27,32 +27,13 @@
 
 <div class="wrapper">
   <div class="aboutme">
-    <h2>Frontend</h2>
-     <p>wat betreft frontend development ken ik de volgende talen die de meeste frontend developers moeten kennen:</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JS</li>
-    </ul>
-    <h2>Backend</h2>
-    <P>In de backend talen ken ik de meest gangbare talen maar naar frontend gaat wel mijn voorkeur</P>
-    <ul>
-      <li>PHP</li>
-      <li>MYSQL</li>
-      <li>PHP My Admin</li>
-    </ul>
-    <h2>Frameworks</h2>
-    <p>Wat betreft frameworks heb ik er nog maar 1 geleerd:</p>
-    <ul>
-      <li>Laravel</li>
-    </ul>
-    <h2>JavaScipt Libraries</h2>
-    <p>Ik heb al met een aantal JavaScript libraries gewerkt en naar deze gaan mijn voorkeur uit:</p>
-    <ul>
-      <li>AnimeJS</li>
-      <li>FullpageJS</li>
-      <li>een klein beetje vueJS</li>
-    </ul>
+    <h2>JavaScript development</h2>
+    <p>Onder Java development plaats ik ook de script versie van Java</p>
+    <p>Met JavaScript heb ik nog niet zoveel ervaring als ik zou willen. <br> Ik kan er een aantal standaard dingen mee maken zoals dropdowns of een show less/more button</p>
+    <h2>Java Minecraft plugin development</h2>
+    <p>Met daadwerkelijk Java development heb ik al wat meer ervaring en dan vooral op het gebied van Minecraft plugin development
+      <br>maar natuurlijk heb ik ook de basiskennis om een java programmatje te schrijven</p>
+
   </div>
 </div>
 
