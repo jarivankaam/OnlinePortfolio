@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Jari's Portfolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,33 +26,41 @@
 <?php require_once 'header.php' ?>
 
 <div class="wrapper">
-  <div class="aboutme">
-    <h2>Frontend</h2>
-     <p>wat betreft frontend development ken ik de volgende talen die de meeste frontend developers moeten kennen:</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JS</li>
-    </ul>
-    <h2>Backend</h2>
-    <P>In de backend talen ken ik de meest gangbare talen maar naar frontend gaat wel mijn voorkeur</P>
-    <ul>
-      <li>PHP</li>
-      <li>MYSQL</li>
-      <li>PHP My Admin</li>
-    </ul>
-    <h2>Frameworks</h2>
-    <p>Wat betreft frameworks heb ik er nog maar 1 geleerd:</p>
-    <ul>
-      <li>Laravel</li>
-    </ul>
-    <h2>JavaScipt Libraries</h2>
-    <p>Ik heb al met een aantal JavaScript libraries gewerkt en naar deze gaan mijn voorkeur uit:</p>
-    <ul>
-      <li>AnimeJS</li>
-      <li>FullpageJS</li>
-      <li>een klein beetje vueJS</li>
-    </ul>
+  <div class="container">
+    <div class="front">
+      <h2>Frontend</h2>
+       <p>wat betreft frontend development ken ik de volgende talen die de meeste frontend developers moeten kennen:</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ul>
+    </div>
+    <div class="back">
+      <h2>Backend</h2>
+      <P>In de backend talen ken ik de meest gangbare talen maar naar frontend gaat wel mijn voorkeur uit</P>
+      <ul>
+        <li>PHP</li>
+        <li>MYSQL</li>
+        <li>PHP My Admin</li>
+      </ul>
+    </div>
+    <div class="frame">
+      <h2>Frameworks</h2>
+      <p>Wat betreft frameworks heb ik er nog maar 1 geleerd:</p>
+      <ul>
+        <li>Laravel</li>
+      </ul>
+   </div>
+    <div class="java">
+      <h2>JavaScipt Libraries</h2>
+      <p>Ik heb al met een aantal JavaScript libraries gewerkt en naar deze gaan mijn voorkeur uit:</p>
+      <ul>
+        <li>AnimeJS</li>
+        <li>FullpageJS</li>
+        <li>een klein beetje vueJS</li>
+      </ul>
+    </div>
   </div>
 </div>
 
