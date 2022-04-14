@@ -3,43 +3,93 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jari's Portfolio</title>
+  <title>AzerApi.xyz: Portofolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="stylesheet" href="css/style.css">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
+
+  <?php require_once('includes/head.php')?>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
- <?php require_once 'header.php' ?>
 
-<div class="wrapper">
-    <div class="typewriter">
-        <h1>Jari van Kaam</h1>
-        <p class="subtitle">Welkom op mijn portfolio website!</p>
+<style>
+  ul li p a{
+    color:white;
+    text-decoration:none;
+    font-size: 2rem;
+  }
+</style>
 
+
+  <!-- Add your site or application content here -->
+  <div class="orbit">
+    <div class="center-image">
+      <img style="border-radius: 25%;" src="assets/man2.jpg" alt="">
+      <img style="border-radius: 25%;" src="assets/man.png" alt="">
     </div>
-</div>
+    <ul>
+      <li>
+        <div><img src="assets/html.svg" alt=""></div>
+        <p><a href="codeertalen.php#web">HTML</a></p>
+      </li>
+      <li>
+        <div><img src="assets/css.3.svg" alt=""></div>
+        <p><a href="codeertalen.php#web">CSS</a></p>
+      </li>
+      <li>
+        <div><img src="assets/js.svg" alt=""></div>
+        <p><a href="codeertalen.php#web">JS</a></p>
+      </li>
+      <li>
+        <div><img src="assets/php.svg" alt=""></div>
+        <p><a href="codeertalen.php#web">PHP</a></p>
+      </li>
+      <li>
+        <div><img src="assets/python.svg" alt=""></div>
+        <p><a href="codeertalen.php#win">Python</a></p>
+      </li>
+      <li>
+        <div><img src="assets/go.svg" alt=""></div>
+        <p><a href="codeertalen.php#win">GO</a></p>
+      </li>
+      <li>
+        <div><img src="assets/calendar.svg" alt=""></div>
+        <p><a href="stage.php">Stage</a></p>
+      </li>
+      <li>
+        <div><img src="assets/person.svg" alt=""></div>
+        <p><a href="mij.php">over Mij</a></p>
+      </li>
+    </ul>
+  </div>
 
-<?php require_once 'footer.php' ?>
+<div class="fixed">
+
+  <?php require_once('includes/footer.php') ?>
+  </div>
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    var obj = document.getElementById('home')
+    obj.classList.add('active')
+
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

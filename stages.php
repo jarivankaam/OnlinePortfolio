@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jari's Portfolio</title>
+  <title>AzerApi.xyz: Portofolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,6 +12,8 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
+
+  <?php require_once('includes/head.php')?>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -23,31 +25,32 @@
 </head>
 
 <body>
- <?php require_once 'header.php' ?>
+<?php require_once('includes/header.php')?>
 
+  <!-- Add your site or application content here -->
 <div class="wrapper">
-  <div class="aboutme">
-    <h2>Over Mij</h2>
-    <p>wie ben ik en waarom zou u mij als stagair willen hebben? <br> Ik ben Jari van Kaam een leergerige jongen die graag aan de slag gaat met code.
-      <br> met mijn school heb ik de volgende talen al geleerd:</p>
-    <ul>
-      <li>Website development(zie tabje Website voor meer informatie)</li>
-      <li>Python development(zie tabje python voor meer informatie)</li>
-      <li>C# development</li>
-      <li>Java Development(zie tabje Java Development voor meer informatie)</li>
-    </ul>
-    <p>Waarom zou u mij precies als stagair willen? <br> ik kan goed samenwerken in een team en pak snel code op. <br> Ook ben ik erg doelgericht en maak ik mijn taken altijd af,
-      <br>en als dit niet lukt laat ik het tijdig weten.</p>
-    <h2>Mijn huidige opleiding</h2>
-    <p>Op het moment studeer ik aan het Curio(Terheidenseweg 350 te breda).<br> Hier volg ik de niveau 4 opleiding tot Software Developer. Ik zit op dit moment in een versnellersjaar.
-      <br>Dit betekent dat ik de 4 jarige durende opleiding in 3 jaar doe.</p>
-  </div>
+    <div class="container">
+        <div class="getbright">
+            <h2>GetBright</h2>
+            <p>Stagair website developement(frontend en backend)</p>
+            <p>Tijdens mijn stage bij GetBright heb ik de volgende projecten gemaakt:</p>
+            <ul class="projects">
+                <li><a target="_blank" href="https://lmadvies.eu/">LMAdvies</a></li>
+                <li><a target="_blank" href="https://www.talent-en-vitaliteitcoach.nl/">Talent en vitaliteitcoach</a></li>
+                <li>Tegeltjeshumor</li>
+            </ul>
+        </div>
+    </div>
 </div>
-
-<?php require_once 'footer.php' ?>
+<?php require_once('includes/footer.php') ?>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    var obj = document.getElementById('stages')
+    obj.classList.add('active')
+
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

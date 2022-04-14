@@ -1,17 +1,18 @@
 {
-  "name": " ",
-  "version": "0.0.1",
+  "name": "portfolio2.0",
+  "version": "1.0.0",
   "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
-  "scripts": {
-    "build": "parcel build index.php",
-    "dev": "parcel index.php --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "index.js",
+  "dependencies": {
+    "headroom.js": "^0.12.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+    "sass": "^1.50.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

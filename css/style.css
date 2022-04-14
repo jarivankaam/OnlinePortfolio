@@ -1,18 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Remove default margin and padding and reset fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: #2e7f32;
+  --blue-light: hsl(210deg, 47%, 74%);
+  --blue-dark: #2e577f;
+  --orange-light: hsl(34deg, 93%, 77%);
+  --orange-dark: #b66a07;
+  --purple-light: hsl(231deg, 44%, 76%);
+  --purple-dark: #334084;
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: #afa018;
+  --brown-light: hsl(20deg, 41%, 69%);
+  --brown-dark: #68402c;
+  --red-light: hsl(0deg, 59%, 76%);
+  --red-dark: #922626;
+  --pink-light: hsl(295deg, 42%, 72%);
+  --pink-dark: #6e2f74;
+  --white-light: hsl(0deg, 0%, 99%);
+  --white-dark: #969696;
+}
+
+body {
+  font-family: system-ui;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.orbit {
+  --size: 12rem;
+  --speed: 120s;
+}
+.orbit .center-image {
+  width: var(--size);
+  position: relative;
+  z-index: 10;
+}
+.orbit .center-image img {
+  position: absolute;
+  transition: opacity 500ms;
+}
+.orbit .center-image img:not(:first-child):hover {
+  opacity: 0;
+}
+.orbit ul {
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  list-style: none;
+  --icon-bg: var(--green-light);
+  --text-bg: var(--green-dark);
+  transform-origin: center;
+  animation: orbit var(--speed) linear infinite;
+}
+.orbit ul:hover {
+  animation-play-state: paused;
+  --orbit-play-state: paused;
+}
+.orbit li {
+  --icon-bg: pink;
+  --text-bg: blue;
+  position: absolute;
+  width: 8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-weight: 500;
+  color: var(--white-light);
+  text-align: center;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+.orbit li:hover {
+  --throb-play-state: paused;
+}
+.orbit li:nth-child(1) {
+  --throb-delay: 0ms;
+}
+.orbit li:nth-child(2) {
+  --throb-delay: 500ms;
+}
+.orbit li:nth-child(3) {
+  --throb-delay: 1000ms;
+}
+.orbit li:nth-child(4) {
+  --throb-delay: 1500ms;
+}
+.orbit li:nth-child(5) {
+  --throb-delay: 2000ms;
+}
+.orbit li:nth-child(6) {
+  --throb-delay: 2500ms;
+}
+.orbit li:nth-child(7) {
+  --throb-delay: 3000ms;
+}
+.orbit li:nth-child(8) {
+  --throb-delay: 3500ms;
+}
+.orbit li > * {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  position: absolute;
+  animation: orbit var(--speed) linear reverse infinite, throb 1s var(--throb-delay) ease-in-out infinite alternate;
+  animation-play-state: var(--orbit-play-state, running), var(--throb-play-state, running);
+}
+.orbit li > div {
+  background-color: var(--icon-bg);
+}
+.orbit li > p {
+  background: var(--text-bg);
+  transition: opacity 500ms;
+  opacity: 0;
+}
+.orbit li:hover > p {
+  opacity: 1;
+}
+.orbit li:nth-child(1) {
+  --icon-bg: var(--blue-light);
+  --text-bg: var(--blue-dark);
+  transform: translate(15rem, 0rem);
+}
+.orbit li:nth-child(2) {
+  --icon-bg: var(--green-light);
+  --text-bg: var(--green-dark);
+  transform: translate(10rem, 10rem);
+}
+.orbit li:nth-child(3) {
+  --icon-bg: var(--pink-light);
+  --text-bg: var(--pink-dark);
+  transform: translate(0, 15rem);
+}
+.orbit li:nth-child(4) {
+  --icon-bg: var(--red-light);
+  --text-bg: var(--red-dark);
+  transform: translate(-10rem, 10rem);
+}
+.orbit li:nth-child(5) {
+  --icon-bg: var(--brown-light);
+  --text-bg: var(--brown-dark);
+  transform: translate(-15rem, 0rem);
+}
+.orbit li:nth-child(6) {
+  --icon-bg: var(--yellow-light);
+  --text-bg: var(--yellow-dark);
+  transform: translate(-10rem, -10rem);
+}
+.orbit li:nth-child(7) {
+  --icon-bg: var(--purple-light);
+  --text-bg: var(--purple-dark);
+  transform: translate(0, -15rem);
+}
+.orbit li:nth-child(8) {
+  --icon-bg: var(--orange-light);
+  --text-bg: var(--orange-dark);
+  transform: translate(10rem, -10rem);
+}
+
+@keyframes orbit {
+  100% {
+    rotate: 1turn;
+  }
+}
+@keyframes hold-position {
+  100% {
+    rotate: -1turn;
+  }
+}
+@keyframes throb {
+  100% {
+    scale: 1.05;
+  }
+}
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
@@ -28,7 +245,6 @@ html {
  *
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -42,7 +258,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-
 hr {
   display: block;
   height: 1px;
@@ -57,7 +272,6 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
@@ -70,7 +284,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
   border: 0;
   margin: 0;
@@ -80,7 +293,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
   resize: vertical;
 }
@@ -88,87 +300,84 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-:root{
-  --main-bg-clr:  #222222;
+:root {
+  --main-bg-clr: #222222;
   --main-border-clr: #383737 ;
-  --main-font: 'Questrial', sans-serif;
+  --main-font: "Questrial", sans-serif;
   --bg-color: #222222;
   --typewriterSpeed: 4s;
   --typewriterCharacters: 11;
 }
 
-body{
+body {
   font-family: var(--main-font);
   background: var(--main-bg-clr);
   color: #ffffff;
 }
 
-.wrapper{
+.wrapper {
   width: 960px;
   margin: 0 auto;
-
 }
 
 /*Navbar styling*/
-
-.navbar--flex{
-  display:flex;
+.navbar--flex {
+  display: flex;
   justify-content: space-around;
-  align-items:center;
+  align-items: center;
   margin-top: 2rem;
-
 }
 
 .buttons-left a,
 .buttons-right a,
-.logo-center a{
-  color:white;
+.logo-center a {
+  color: white;
   font-size: 1.4em;
-  text-decoration:none;
+  text-decoration: none;
   margin-right: 0.4em;
   margin-top: 1em;
 }
 
 .buttons-left a:hover,
 .buttons-right a:hover,
-.logo-center a:hover{
+.logo-center a:hover {
   color: grey;
   text-decoration: underline dashed;
 }
-header{
+
+header {
   height: 4rem;
   border-bottom: 2px solid var(--main-border-clr);
 }
 
-a.button.title{
+a.button.title {
   font-size: 1.8rem;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.active{
+.active {
   text-decoration: underline !important;
-  font-weight:bolder !important;
+  font-weight: bolder !important;
 }
 
-.container h2{
+.container h2 {
   border-left: 5px solid #ffffff;
   padding-left: 2px;
 }
-.container{
+
+.container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-right:10px ;
+  margin-right: 10px;
 }
 
-
-.taal{
+.taal {
   font-size: 2.5rem;
   text-decoration: underline;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.spacer{
+.spacer {
   width: auto;
   height: auto;
   margin-top: 2rem;
@@ -182,8 +391,7 @@ a.button.title{
   place-content: center;
   text-align: center;
   background: #222222;
-  color:white;
-
+  color: white;
 }
 
 h1 {
@@ -205,16 +413,13 @@ h1::after {
 
 h1::before {
   background: var(--bg-color);
-  animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 1s forwards;
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
 }
 
 h1::after {
   width: 0.125em;
   background: white;
-  animation: typewriter var(--typewriterSpeed)
-      steps(var(--typewriterCharacters)) 1s forwards,
-    blink 750ms steps(var(--typewriterCharacters)) infinite;
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
 }
 
 .subtitle {
@@ -234,48 +439,40 @@ h1::after {
     left: 100%;
   }
 }
-
 @keyframes blink {
   to {
     background: transparent;
   }
 }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-
-
-.projects  li a{
+.projects li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
-.projects li a:hover{
-  color:grey;
+.projects li a:hover {
+  color: grey;
   text-decoration: underline dotted;
 }
 
-footer .footerContainer{
-  display:flex;
+footer .footerContainer {
+  display: flex;
   justify-content: space-around;
   border-top: 0.2rem solid white;
 }
 
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
-
 .hidden,
 [hidden] {
   display: none !important;
@@ -289,7 +486,6 @@ footer .footerContainer{
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -308,7 +504,6 @@ footer .footerContainer{
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -323,7 +518,6 @@ footer .footerContainer{
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
   visibility: hidden;
 }
@@ -339,7 +533,6 @@ footer .footerContainer{
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix::before,
 .clearfix::after {
   content: " ";
@@ -355,28 +548,21 @@ footer .footerContainer{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
@@ -385,7 +571,7 @@ footer .footerContainer{
   }
 
   a,
-  a:visited {
+a:visited {
     text-decoration: underline;
   }
 
@@ -402,7 +588,7 @@ footer .footerContainer{
    * or use the `javascript:` pseudo protocol
    */
   a[href^="#"]::after,
-  a[href^="javascript:"]::after {
+a[href^="javascript:"]::after {
     content: "";
   }
 
@@ -411,7 +597,7 @@ footer .footerContainer{
   }
 
   pre,
-  blockquote {
+blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -425,20 +611,21 @@ footer .footerContainer{
   }
 
   tr,
-  img {
+img {
     page-break-inside: avoid;
   }
 
   p,
-  h2,
-  h3 {
+h2,
+h3 {
     orphans: 3;
     widows: 3;
   }
 
   h2,
-  h3 {
+h3 {
     page-break-after: avoid;
   }
 }
 
+/*# sourceMappingURL=style.css.map */

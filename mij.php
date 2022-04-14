@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jari's Portfolio</title>
+  <title>AzerApi.xyz: Portofolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,6 +12,8 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
+
+  <?php require_once('includes/head.php')?>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -23,51 +25,43 @@
 </head>
 
 <body>
-<?php require_once 'header.php' ?>
+<?php require_once('includes/header.php')?>
 
+<!-- Add your site or application content here -->
 <div class="wrapper">
-  <div class="container">
-    <div class="front">
-      <h2>Frontend</h2>
-       <p>wat betreft frontend development ken ik de volgende talen die de meeste frontend developers moeten kennen:</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-      </ul>
-    </div>
-    <div class="back">
-      <h2>Backend</h2>
-      <P>In de backend talen ken ik de meest gangbare talen maar naar frontend gaat wel mijn voorkeur uit</P>
-      <ul>
-        <li>PHP</li>
-        <li>MYSQL</li>
-        <li>PHP My Admin</li>
-      </ul>
-    </div>
-    <div class="frame">
-      <h2>Frameworks</h2>
-      <p>Wat betreft frameworks heb ik er nog maar 1 geleerd:</p>
-      <ul>
-        <li>Laravel</li>
-      </ul>
-   </div>
-    <div class="java">
-      <h2>JavaScipt Libraries</h2>
-      <p>Ik heb al met een aantal JavaScript libraries gewerkt en naar deze gaan mijn voorkeur uit:</p>
-      <ul>
-        <li>AnimeJS</li>
-        <li>FullpageJS</li>
-        <li>een klein beetje vueJS</li>
-      </ul>
-    </div>
+  <div class="typewriter" id="type">
+    <h1 >Wie is Jari van kaam?</h1>
+    <p class="subtitle">Ik ben een hardwerkende 19 jarige student</p>
+    <p class="subtitle">Naast hardwerkend kan ook goed in <br>een team samen werken en pak ik code snel op.</p>
+    <p class="subtitle">Ik ben doelgericht en maak ik mijn taken altijd af. <br> als dit niet lukt laat ik optijd iets weten</p>
+
+    <ul>
+      <p class="subtitle">Mijn hobbies zijn onder andere:</p>
+        <p class="subtitle">Coderen</p>
+
+        <p class="subtitle">Gamen</p>
+
+        <p class="subtitle">Lezen</p>
+
+        <p class="subtitle">YouTube</p>
+
+    </ul>
   </div>
 </div>
 
-<?php require_once 'footer.php' ?>
+<div class="fixed">
+
+  <?php require_once('includes/footer.php') ?>
+</div>
+
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script>
+  var obj = document.getElementById('mij')
+  obj.classList.add('active')
+
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
